@@ -16,7 +16,7 @@ FROM film;
 
 SELECT 
 	CONCAT(FLOOR(avg(length)),'h '
-	, ROUND(MOD(avg(length), 60), 0), 'm') AS 'Average Movie Duration'
+	, FLOOR(MOD(avg(length), 60)), 'm') AS 'Average Movie Duration'
 from film;
 
 -- 2.1 Calculate the number of days that the company has been operating.
